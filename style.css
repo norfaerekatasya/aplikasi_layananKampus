@@ -1,0 +1,22 @@
+:root { font-family: Arial, sans-serif; color: #1f2937; background: #f5f7fb; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.topbar { display:flex; justify-content:space-between; align-items:center; padding:18px 8%; background:#fff; box-shadow:0 2px 12px #17255412; }
+.brand { font-size:20px; font-weight:700; color:#173b70; }
+.brand span { color:#2c9b91; }
+nav { display:flex; gap:24px; }
+nav a { color:#334155; text-decoration:none; font-size:14px; }
+.hero { padding:76px 8%; background:linear-gradient(120deg,#173b70,#287b91); color:#fff; }
+.eyebrow { letter-spacing:3px; font-size:12px; color:#bce9e5; font-weight:bold; }
+.hero h1 { font-size:clamp(30px,5vw,48px); line-height:1.15; margin:16px 0; }
+.hero p:last-child { color:#e0edf5; }
+.services { padding:48px 8%; }
+.services h2,.notice h2 { color:#173b70; }
+.service-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:18px; margin-top:24px; }
+.service-card { background:#fff; padding:24px; border-radius:12px; border:1px solid #e5eaf1; }
+.symbol { color:#2c9b91; font-weight:bold; font-size:13px; }
+.service-card h3 { margin-bottom:8px; color:#173b70; }
+.service-card p,.notice p { color:#64748b; line-height:1.6; font-size:14px; }
+.notice { margin:0 8% 48px; padding:24px; background:#e8f3f5; border-radius:12px; }
+footer { padding:22px 8%; text-align:center; background:#173b70; color:#e5edf5; font-size:13px; }
+@media(max-width:600px) { .topbar { align-items:flex-start; gap:14px; flex-direction:column; } nav { flex-wrap:wrap; gap:14px; } .hero { padding-top:54px; padding-bottom:54px; } }

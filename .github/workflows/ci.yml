@@ -1,0 +1,30 @@
+name: Campus Portal CI
+
+on:
+  push:
+    branches: [ main, "feat/**", "fix/**" ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validate static website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f style.css
+          test -f README.md
+
+      - name: Check HTML document structure
+        run: |
+          grep -qi '<!DOCTYPE html>' index.html
+          grep -qi '<html lang="id">' index.html
+          grep -qi '</html>' index.html
+
+      - name: Check stylesheet is linked
+        run: grep -q 'href="style.css"' index.html
